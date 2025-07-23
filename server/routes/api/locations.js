@@ -40,6 +40,7 @@ router.post("/", multerUploads, async (req, res) => {
           photo: image,
           likeCount: 0,
         });
+        res.status(201).send();
       })
       .catch((err) =>
         res.status(400).json({
